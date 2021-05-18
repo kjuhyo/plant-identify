@@ -20,7 +20,7 @@ import argparse
 app = Flask(__name__)
 
 DEFAULT_DATA_DIRECTORY = 'custom_set'
-DEFAULT_CHECKPOINT_FILENAME = './bestModel10128.pth'
+DEFAULT_CHECKPOINT_FILENAME = 'https://plant-identify.s3.ap-northeast-2.amazonaws.com/bestModel10128.pth'
 DEFAULT_TOP_K = 3
 DEFAULT_GPU = True
 FILENAME_JSON_CATEGORY = 'cat_to_name.json'

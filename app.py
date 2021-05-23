@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request, redirect, send_file
+from flask import Flask, jsonify, render_template, request, redirect, send_file, make_response
 import io
 
 import os
@@ -152,7 +152,7 @@ def result_predict():
     print("결과:", {'학명': common, '이름' : name})
     response = {'result' : common, 'name' : name}
     # return render_template("result.html", name=f.filename, result=class_name) # 로컬 테스트용
-    return jsonify(response) # 배포용
+    return make_response(jsonify(response)) # 배포용
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=4000)
+    app.run(host='0.0.0.0',port=5000)
